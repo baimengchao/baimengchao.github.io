@@ -1,7 +1,43 @@
 <html>
-<% include ../comm/head.html%>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>我的主页</title>
+		<meta name="keywords" content="我的主页" />
+		<meta name="description" content="我的主页" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/inc/swiper.min.css">
+	</head>
 <body class="canvaslist">
-	<%include ../comm/top.html%>
+	<section class="html_nav">
+		<section class="html_auto">
+			<div class="logo">
+				<img src="/images/logo.png">
+			</div>
+			<ul class="nav">
+				<li class="li_click" url="/" target="_self" >我的主页</li>
+				<li class="li_click" url="/views/myWorks.html" target="_self" >项目案例</li>
+				<li class="on" url="/views/canvas/canvaslist.html" target="_self" >canvas动画</li>            
+				<li class="li_click" url="/views/about.html" target="_self" >关于本站</li>
+				<li class="bottom_line"></li>
+			</ul>
+		</section>
+	</section>
+	<section class="html_auto">
+		<section class="html_banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="/UploadFiles/banner_1.jpg"></div>
+					<div class="swiper-slide"><img src="/UploadFiles/banner_2.jpg"></div>
+					<div class="swiper-slide"><img src="/UploadFiles/banner_3.jpg"></div>
+				</div>
+				<!-- 如果需要分页器 -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+	</section>
 	<section class="html_auto">
 		<ul class="html_list">
 			<li class="li_1">
@@ -30,7 +66,10 @@
 			</li>
 		</ul>
 	</section>
-	<% include ../comm/foot.html%>
+	<section class="html_foot">
+		<h1>我的联系方式</h1>
+		<p>手机（微信）：18513458154 &nbsp;&nbsp;&nbsp;&nbsp; 邮箱：1479512156@qq.com</p>
+	</section>
 <script data-main="/widget/main.js" src="/inc/require.js" id="script_page" page="canvas"></script>
 </body>
 </html>
