@@ -1,0 +1,27 @@
+<section class="html_nav">
+    <section class="html_auto">
+        <div class="logo">
+            <img src="/images/logo.png">
+        </div>
+        <ul class="nav">
+            <li class="<%if(sign ==1){%>on<%}else {%> li_click<%}%>" url="/" target="_self" >我的主页</li>
+            <li class="<%if(sign ==3){%>on<%}else {%> li_click<%}%>" url="/myWorks" target="_self" >项目案例</li>
+            <li class="<%if(sign ==2){%>on<%}else {%> li_click<%}%>" url="/canvas" target="_self" >canvas动画</li>            
+            <li class="<%if(sign ==4){%>on<%}else {%> li_click<%}%>" url="/about" target="_self" >关于本站</li>
+            <li class="bottom_line"></li>
+        </ul>
+    </section>
+</section>
+<section class="html_auto">
+    <section class="html_banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/UploadFiles/banner_1.jpg"></div>
+                <div class="swiper-slide"><img src="/UploadFiles/banner_2.jpg"></div>
+                <div class="swiper-slide"><img src="/UploadFiles/banner_3.jpg"></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+</section>

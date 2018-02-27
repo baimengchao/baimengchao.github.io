@@ -1,0 +1,100 @@
+body.index{
+    .AboutUs {
+        width: 100%;
+        margin-top: 20px;
+        .information {
+            .left,.right {
+                width: 580px;
+                height: 40px;
+                line-height: 40px;
+                float: left;
+                font-size: 16px;
+            }
+            .left {
+                text-align: right;
+                font-weight: 600;
+            }
+            .right {
+                float: right;
+            }
+        }
+        &:after {
+            .clear();
+        }
+    }
+    .module_title {
+        margin-top: 50px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: normal;
+        &:after {
+            .clear();
+        }
+    }
+    .knowledge {
+        margin-top: 50px;
+        perspective: 500;
+        -webkit-perspective: 500;
+        .box_hover{
+            width: 200px;
+            height: 200px;
+            margin-left: 50px;
+            margin-right: 50px;
+            float: left;
+            .box_bao {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px 10px #eee;
+                transition: all 0.5s;
+                transform-style: preserve-3d;
+                .box {
+                    position: absolute;
+                    top: 0;
+                    transform: translateZ(1px);
+                    background: #fff;
+                    .box_in,.box_out {               
+                        width: 200px;
+                        height: 200px;
+                        line-height: 30px;
+                        display: table-cell;
+                        vertical-align: middle; 
+                        padding: 10px;   
+                        text-align: center;                            
+                    }
+                }
+                .box:first-child{
+                    transform: translateZ(-1px) rotateY(180deg);
+                }
+            }
+            &:hover {
+                .box_bao {
+                    transform: rotateY(180deg);
+                    transition: all 0.5s;
+                }
+            }
+        }
+        &:after {
+            .clear();
+        }
+    }
+    .personal {
+        width: 800px;
+        margin: 20px auto 0;
+        .p1 {
+            line-height: 40px;
+            color: #666;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        .p2 {
+            font-size: 14px;
+            line-height: 40px;
+            color: #999;
+            text-indent: 2em;
+        }
+    }
+}

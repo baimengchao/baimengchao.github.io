@@ -1,0 +1,18 @@
+/*
+    白梦超
+    2018-02-26
+    我的作品页面样式
+*/
+
+body.myWorks {
+    .intro-loop(@n, @i:1) when (@i <= @n) {
+        .li_@{i} {
+            .content_box{
+                background: url("/images/myWorks_@{i}.jpg") center center no-repeat;
+                background-size: 200px 200px;
+            }
+        }
+        .intro-loop(@n, (@i + 1));
+    }
+    .intro-loop(6);
+}
