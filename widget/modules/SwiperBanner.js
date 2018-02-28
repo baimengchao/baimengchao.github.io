@@ -13,14 +13,21 @@ define(['lib/swiper.min'],function($swiper){
         //banner轮播
         BannerSwiper: function(){
             var mySwiper = new $swiper ('.swiper-container', {
-                loop: true,
-                autoplay: true,
+                loop: true,                
                 delay: 3000,
                 speed: 500,
+                autoplay: {
+                    disableOnInteraction: false,
+                    autoplay: true,
+                },
                 pagination: {
-                    el: '.swiper-pagination',
-                    hideOnClick: true
+                    el: '.swiper-pagination'
                   },
+                // 前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
                   
               });
         }
