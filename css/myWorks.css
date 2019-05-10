@@ -1,0 +1,29 @@
+/*
+    白梦超
+    2018-02-26
+    我的作品页面样式
+*/
+body.myWorks .li_1 .content_box {
+  background: url("/images/myWorks_1.jpg") center center no-repeat;
+  background-size: 200px 200px;
+}
+body.myWorks .li_2 .content_box {
+  background: url("/images/myWorks_2.jpg") center center no-repeat;
+  background-size: 200px 200px;
+}
+body.myWorks .li_3 .content_box {
+  background: url("/images/myWorks_3.jpg") center center no-repeat;
+  background-size: 200px 200px;
+}
+body.myWorks .li_4 .content_box {
+  background: url("/images/myWorks_4.jpg") center center no-repeat;
+  background-size: 200px 200px;
+}
+body.myWorks .li_5 .content_box {
+  background: url("/images/myWorks_5.jpg") center center no-repeat;
+  background-size: 200px 200px;
+}
+body.myWorks .li_6 .content_box {
+  background: url("/images/myWorks_6.jpg") center center no-repeat;
+  background-size: 200px 200px;
+}

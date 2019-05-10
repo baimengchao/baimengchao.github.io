@@ -1,0 +1,213 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+ul,
+li,
+form,
+button,
+input,
+textarea,
+th,
+td,
+div,
+dl,
+dt,
+dd,
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Microsoft YaHei';
+}
+
+body {
+    background: #fff;
+}
+
+#boxOut {
+    width: 50vw;
+    height: 50vh;
+    margin: 25vh 0 0 25vw;
+    position: relative;
+    transform-style: preserve-3d;
+    float: left;
+    /* perspective: 200px; */
+}
+
+#boxOut #box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(10deg) rotateY(10deg);
+    animation: move 5s linear infinite;
+}
+
+#boxOut #box div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+    line-height: 50px;
+    text-align: center;
+    background: #ff0000;
+    box-shadow: 0px 0px 5px #fff;
+    opacity: 0.8;
+}
+
+#boxOut #box div.out {
+    margin-left: -100px;
+    margin-top: -100px;
+    width: 200px;
+    height: 200px;
+    transition: all .3s linear;
+}
+
+@list: rotateX(90deg), rotateY(0), rotateY(90deg), rotateY(180deg), rotateY(270deg), rotateX(-90deg);
+
+
+.ml-loop(@list, @i: 1, @num: @i+6, @val: extract(@list, @i)) when (length(@list)>=@i) {
+    #boxOut #box div:nth-of-type(@{i}) {
+        transform:@val translateZ(50px);
+        background: url("../xixi/@{i}.jpg") center center;
+        background-size: cover;
+    }
+
+    #boxOut #box div:nth-of-type(@{num}) {
+        transform: @val translateZ(100px);
+        background: url("../xixi/@{num}.jpg") center center;
+        background-size: cover;
+    }
+
+    #boxOut:hover #box div:nth-of-type(@{num}) {
+        transform: @val translateZ(200px);
+        background: url("../xixi/@{num}.jpg") center center;
+        background-size: cover;
+    }
+
+    .ml-loop(@list, (@i+1));
+}
+.ml-loop(@list);
+
+
+    // #boxOut #box div:nth-of-type(1) {
+    //     transform: rotateX(90deg) translateZ(50px);
+    //     background: url('xixi/1.jpg') center center;
+    //     background-size: contain;
+    // }
+
+    // #boxOut #box div:nth-of-type(2) {
+    //     transform: rotateY(0) translateZ(50px);
+    //     background: url('xixi/2.jpg') center center;
+    //     background-size: contain;
+    // }
+
+    // #boxOut #box div:nth-of-type(3) {
+    //     transform: rotateY(90deg) translateZ(50px);
+    //     background: url('xixi/3.jpg') center center;
+    //     background-size: contain;
+    // }
+
+    // #boxOut #box div:nth-of-type(4) {
+    //     transform: rotateY(180deg) translateZ(50px);
+    //     background: url('xixi/4.jpg') center center;
+    //     background-size: contain;
+    // }
+
+    // #boxOut #box div:nth-of-type(5) {
+    //     transform: rotateY(270deg) translateZ(50px);
+    //     background: url('xixi/5.jpg') center center;
+    //     background-size: contain;
+    // }
+
+    // #boxOut #box div:nth-of-type(6) {
+    //     transform: rotateX(-90deg) translateZ(50px);
+    //     background: url('xixi/6.jpg') center center;
+    //     background-size: contain;
+    // }
+
+    // #boxOut #box div:nth-of-type(7) {
+    //     transform: rotateX(90deg) translateZ(100px);
+    //     background: url('xixi/7.jpg') center center;
+    //     background-size: contain;
+    // }
+
+    // #boxOut #box div:nth-of-type(8) {
+    //     transform: rotateY(0) translateZ(100px);
+    //     background: url('xixi/8.jpg') center center;
+    //     background-size: contain;
+    // }
+
+    // #boxOut #box div:nth-of-type(9) {
+    //     transform: rotateY(90deg) translateZ(100px);
+    //     background: url('xixi/9.jpg') center center;
+    //     background-size: contain;
+    // }
+
+    // #boxOut #box div:nth-of-type(10) {
+    //     transform: rotateY(180deg) translateZ(100px);
+    //     background: url('xixi/10.jpg') center center;
+    //     background-size: contain;
+    // }
+
+    // #boxOut #box div:nth-of-type(11) {
+    //     transform: rotateY(270deg) translateZ(100px);
+    //     background: url('xixi/11.jpg') center center;
+    //     background-size: contain;
+    // }
+
+    // #boxOut #box div:nth-of-type(12) {
+    //     transform: rotateX(-90deg) translateZ(100px);
+    //     background: url('xixi/12.jpg') center center;
+    //     background-size: contain;
+    // }
+
+    // #boxOut:hover #box div:nth-of-type(7) {
+    //     transform: rotateX(90deg) translateZ(150px);
+    //     opacity: 0.4;
+    // }
+
+    // #boxOut:hover #box div:nth-of-type(8) {
+    //     transform: rotateY(0deg) translateZ(150px);
+    //     opacity: 0.4;
+    // }
+
+    // #boxOut:hover #box div:nth-of-type(9) {
+    //     transform: rotateY(90deg) translateZ(150px);
+    //     opacity: 0.4;
+    // }
+
+    // #boxOut:hover #box div:nth-of-type(10) {
+    //     transform: rotateY(180deg) translateZ(150px);
+    //     opacity: 0.4;
+    // }
+
+    // #boxOut:hover #box div:nth-of-type(11) {
+    //     transform: rotateY(270deg) translateZ(150px);
+    //     opacity: 0.4;
+    // }
+
+    // #boxOut:hover #box div:nth-of-type(12) {
+    //     transform: rotateX(-90deg) translateZ(150px);
+    //     opacity: 0.4;
+    // }
+
+    @keyframes move {
+        0% {
+            transform: rotateX(10deg) rotateY(0deg);
+        }
+
+        100% {
+            transform: rotateX(10deg) rotateY(360deg);
+        }
+    }
