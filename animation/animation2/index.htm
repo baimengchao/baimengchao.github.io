@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        p,
+        ul,
+        li,
+        form,
+        button,
+        input,
+        textarea,
+        th,
+        td,
+        div,
+        dl,
+        dt,
+        dd,
+        img {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: 'Microsoft YaHei';
+        }
+
+        body {
+            background: #000;
+        }
+
+        #boxOut {
+            width: 49vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            float: left;
+            /* perspective: 200px; */
+        }
+
+        #boxOut>div {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translateZ(100px);
+            transform: rotateX(10deg) rotateY(10deg);
+        }
+
+        #boxOut div div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -25px;
+            margin-top: -25px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: #ff0000;
+            box-shadow: 0px 0px 5px #fff;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: all 1s linear;
+            transform: translateZ(0px);
+        }
+
+        /*  球2*/
+        #boxOut1 {
+            width: 49vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            float: left;
+            /* perspective: 200px; */
+        }
+
+        #boxOut1>div {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translateZ(100px);
+            transform: rotateX(10deg) rotateY(10deg);
+        }
+
+        #boxOut1 div div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -25px;
+            margin-top: -25px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: #ff0000;
+            box-shadow: 0px 0px 5px #fff;
+            overflow: hidden;
+            transition: all 1s linear;
+            transform: translateZ(200px);
+        }
+
+        /* 球3*/
+        #boxOut3 {
+            width: 49vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            float: left;
+            /* perspective: 200px; */
+        }
+
+        #boxOut3>div {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translateZ(100px);
+            transform: rotateX(10deg) rotateY(10deg);
+        }
+
+        #boxOut3 div div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* margin-left: -25px;
+            margin-top: -25px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: #ff0000;
+            box-shadow: 0px 0px 5px #fff;
+            overflow: hidden;
+            transition: all 1s linear; */
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-left: 10px solid red;
+            border-right: 10px solid red;
+            background: transparent;
+            box-shadow: none;
+            transform: translateZ(200px);
+        }
+
+        /* 球4*/
+        #boxOut4 {
+            width: 49vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            float: left;
+            /* perspective: 200px; */
+        }
+
+        #boxOut4>div {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translateZ(100px);
+            transform: rotateX(10deg) rotateY(10deg);
+        }
+
+        #boxOut4 div div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-top: 20px solid red;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            background: transparent;
+            box-shadow: none;
+            transform: translateZ(200px);
+        }
+
+        /* 球5*/
+        #boxOut5 {
+            width: 49vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            float: left;
+            /* perspective: 200px; */
+        }
+
+        #boxOut5>div {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translateZ(100px);
+            transform: rotateX(10deg) rotateY(10deg);
+        }
+
+        #boxOut5 div div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-top: 10px solid red;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 10px solid red;
+            background: transparent;
+            box-shadow: none;
+            transform: translateZ(200px);
+        }
+
+        /* 球6*/
+        #boxOut6 {
+            width: 49vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            float: left;
+            /* perspective: 200px; */
+        }
+
+        #boxOut6>div {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translateZ(100px);
+            transform: rotateX(10deg) rotateY(10deg);
+        }
+
+        #boxOut6 div div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 20px solid red;
+            border-right: 20px solid red;
+            
+            background: transparent;
+            box-shadow: none;
+            transform: translateZ(200px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="boxOut">
+
+    </div>
+    <div id="boxOut1">
+
+    </div>
+
+    <div id="boxOut3">
+
+    </div>
+    <div id="boxOut4">
+
+    </div>
+    <div id="boxOut5">
+
+    </div>
+    <div id="boxOut6">
+
+    </div>
+</body>
+<script src="js/cssCreateBall.js"></script>
+<script>
+    var ball1 = new cssCreateBall();
+    var ball1_opt = {
+        targetBox: 'boxOut', //目标元素外包盒子id，必须是id
+        obj: [1,5,9,5,1], //球体元素分两类，数字 - 球体总行数每行比上一行多两个；数组-分别设置每一行个数
+    }
+    ball1.init(ball1_opt);
+
+    var ball2 = new cssCreateBall();
+    var ball2_opt = {
+        targetBox: 'boxOut1', //目标元素外包盒子id，必须是id
+        obj: [1,5,8,11,8,5,1], //球体元素分两类，数字 - 球体总行数每行比上一行多两个；数组-分别设置每一行个数
+    }
+    ball2.init(ball2_opt);
+
+    var ball3 = new cssCreateBall();
+    var ball3_opt = {
+        targetBox: 'boxOut3', //目标元素外包盒子id，必须是id
+        obj: 11, //球体元素分两类，数字 - 球体总行数每行比上一行多两个；数组-分别设置每一行个数
+    }
+    ball3.init(ball3_opt);
+
+    var ball4 = new cssCreateBall();
+    var ball4_opt = {
+        targetBox: 'boxOut4', //目标元素外包盒子id，必须是id
+        obj: 11, //球体元素分两类，数字 - 球体总行数每行比上一行多两个；数组-分别设置每一行个数
+    }
+    ball4.init(ball4_opt);
+
+    var ball5 = new cssCreateBall();
+    var ball5_opt = {
+        targetBox: 'boxOut5', //目标元素外包盒子id，必须是id
+        obj: 11, //球体元素分两类，数字 - 球体总行数每行比上一行多两个；数组-分别设置每一行个数
+    }
+    ball5.init(ball5_opt);
+
+    var ball6 = new cssCreateBall();
+    var ball6_opt = {
+    targetBox: 'boxOut6', //目标元素外包盒子id，必须是id
+    obj: 11, //球体元素分两类，数字 - 球体总行数每行比上一行多两个；数组-分别设置每一行个数
+    }
+    ball6.init(ball6_opt);
+</script>
+<!-- <script>
+    //添加元素多行，每行比上一行多两个,一半行数+1;可以传一个数组，自定义每行行个数，
+    function addElements(obj) {
+        var oBox = document.getElementById('box');
+        if (typeof obj == 'number') {
+            for (var j = 0; j < obj; j++) {
+                if (j < obj / 3) {
+                    for (var i = 0; i < 2 * j + 1; i++) {
+                        var odiv = document.createElement('div');
+                        odiv.setAttribute('line', j + 1)
+                        oBox.appendChild(odiv);
+                    }
+                } else {
+                    for (var i = 0; i < 2 * (obj - j - 1) + 1; i++) {
+                        var odiv = document.createElement('div');
+                        odiv.setAttribute('line', j + 1)
+                        oBox.appendChild(odiv);
+                    }
+                }
+            }
+        } else {
+            for (var j = 0; j < obj.length; j++) {
+                for (var i = 0; i < obj[j]; i++) {
+                    var odiv = document.createElement('div');
+                    odiv.setAttribute('line', j + 1)
+                    oBox.appendChild(odiv);
+                }
+            }
+        }
+
+    }
+
+    addElements([1, 5, 9, 15, 9, 5, 1])
+
+    var aDiv = document.getElementById('box').getElementsByTagName('div');
+    var maxLine = aDiv[aDiv.length - 1].getAttribute('line');
+    var j = 0;
+    document.getElementById('button').onclick = function () {
+        oBox.className = "box";
+        //球体
+        for (; j < maxLine; j++) {
+            var linDiv = [];
+            for (var m = 0; m < aDiv.length; m++) {
+                if (aDiv[m].getAttribute('line') == (j +
+                        1)) {
+                    linDiv.push(aDiv[m]);
+                }
+            }
+            var i = 0;
+            var degX = 180 / (maxLine - 1) * (j - (maxLine - 1) / 2);
+            var degY = 360 /
+                linDiv.length;
+            for (; i < linDiv.length; i++) {
+                linDiv[i].style.transition = "all "+ (j*5 + i)+"s liner";
+                linDiv[i].style.transform = 'rotateY(' + degY * i + 'deg) rotateX(' +
+                    degX + 'deg) translateZ(200px) ';
+                
+            }
+        }
+    }
+
+
+    //斜面
+    var oBox = document.getElementById('box')
+    oBox.className = "box ping";
+    var xieLine = Math.ceil(aDiv.length / 4);
+    for (var i = 0; i < xieLine; i++) {
+
+        aDiv[i].style.transform = "translateZ(" + i * 50 + "px) translateX(" + i * 50 + "px) rotateY(-60deg)";
+        aDiv[i + xieLine].style.transform = "translateZ(" + i * 50 + "px) translateY(100px) translateX(" + i * 50 +
+            "px)  rotateY(-60deg)"
+        aDiv[i + xieLine * 2].style.transform = "translateZ(" + i * 50 + "px) translateY(200px) translateX(" + i * 50 +
+            "px) rotateY(-60deg)"
+        if (aDiv[i + xieLine * 3]) {
+            aDiv[i + xieLine * 3].style.transform = "translateZ(" + i * 50 + "px) translateY(300px) translateX(" + i *
+                50 + "px) rotateY(-60deg)"
+        }
+
+    }
+
+    var oBox = document.getElementById('box')
+    var x, y, startX, startY, moveX, moveY;
+    startX = 10;
+    startY = 10;
+    document.addEventListener('mousedown', function (e) {
+        x = e.pageX;
+        y = e.pageY;
+
+        downStartX = startX;
+        downStartY = startY
+        document.addEventListener('mousemove', fn1, false)
+        document.addEventListener('mouseup', fn2, false)
+    }, false)
+
+    var fn2 = function () {
+        document.removeEventListener('mousemove', fn1)
+        document.removeEventListener('mouseup', fn2)
+    }
+    var fn1 = function (e) {
+        moveX = e.pageX;
+        moveY = e.pageY;
+
+        startX = downStartX - (moveY - y);
+        startY = downStartY + (moveX - x);
+
+        //oBox.style.transform = ' rotateY(' + (startY + moveX - x) + 'deg)';
+        oBox.style.transform = 'rotateX(' + startX + 'deg) rotateY(' + startY + 'deg)';
+
+
+    }
+</script> -->
+
+</html>

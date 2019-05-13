@@ -212,6 +212,10 @@ input:focus {
   background: url("/images/canvas_4.jpg") center center no-repeat;
   background-size: 200px 200px;
 }
+.html_list .li_5 .content_box {
+  background: url("/images/canvas_5.jpg") center center no-repeat;
+  background-size: 200px 200px;
+}
 .html_banner {
   margin-top: 20px;
 }
